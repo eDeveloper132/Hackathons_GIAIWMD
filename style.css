@@ -1,0 +1,167 @@
+/* Light Mode (default) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    border-right: none;
+}
+
+.profile-picture {
+    border: 5px solid #e63946;
+    margin-bottom: 20px;
+    border-radius: 100%;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.profile-picture:hover{
+    border: 5px solid blue;
+    transition-duration: 0.5s;
+}
+
+.right-section {
+    padding: 20px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+h3 {
+    font-size: 1.2rem;
+    padding: 2%;
+    margin: 20px 0 10px;
+    box-shadow: 0 0 15px #e63946;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+h3:hover{
+    box-shadow: 0 0 15px blue;
+    transition-duration: 0.5s;
+}
+
+ul {
+    list-style-type: fill round;
+    padding: 10;
+    margin: 10px 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #ff737c;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .resume-container {
+    background-color: #1e1e1e;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .left-section {
+    background-color: #333;
+    border-right: none;
+}
+
+.dark-mode h3, .dark-mode p, .dark-mode a {
+    color: white;
+}
+
+.dark-mode button {
+    background-color: #ff737c;
+    color: black;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.dark-mode button:hover {
+    background-color: transparent;
+    box-shadow: blue;
+    border-color: blue;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 600px) {
+    .resume-container {
+        flex-direction: row;
+    }
+
+    .left-section {
+        width: 35%;
+        border-right: 5px solid #e63946;
+    }
+
+    .right-section {
+        width: 65%;
+    }
+}
+
+@media (max-width: 599px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
