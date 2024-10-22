@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shearable Editable Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <form id="resume-form">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter a Unique Username" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter Your Email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="Enter Your Phone Number" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <textarea id="education" placeholder="Enter Your Education" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <textarea id="experience" placeholder="Enter Your Work Experience" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <textarea id="skills" placeholder="Enter Your Skills" rows="4" required></textarea>
+        </fieldset>
+
+        <button type="submit"><b>Generate Resume</b></button>
+    </form>
+
+    <!-- Display Modal -->
+    <div id="display-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="resume-display"></div>
+
+            <button id="edit-button" class="edit-button">Edit Resume</button>
+            <button id="download-button" class="save-button">Download as PDF</button>
+            <input type="text" id="share-link" readonly />
+            <button id="copy-button" class="save-button">Copy Link</button>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-edit-button">&times;</span>
+            <div id="edit-form-container"></div>
+            <button id="save-edit-button" class="save-button">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
